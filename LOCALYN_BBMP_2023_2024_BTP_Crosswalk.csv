@@ -1,0 +1,160 @@
+Category,Sub Category,Count_2023,Count_2024,Total_Count,LOCALYN_Category,BTP_Event_Cause,Mapping_Strength,Matching_Use
+Advertisement,Flex and banners,426,791,1217,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Advertisement,Unsafe Hoardings,61,63,124,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+BBMP Election Branch,Epic Details Corrections,15,11,26,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+BBMP Election Branch,Electoral Roll Objections,4,6,10,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+CORONA COVID19,Stockout,3,33,36,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+CORONA COVID19,Overcharging,8,13,21,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+CORONA COVID19,Others,6,2,8,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+CORONA COVID19,Some other person affected from COVID,3,2,5,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+CORONA COVID19,Government regulations not being followed,2,0,2,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Call Center,others,31,32,63,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Call Center,Call center Issues,10,23,33,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Other Khata / ekhata issues,0,133,133,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Ekhata missing in online,0,85,85,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,ekhata approval pending with ARO,0,74,74,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Ekhata - name correction,0,51,51,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Ekhata Other corrections,0,28,28,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Ekhata Area Correction,0,21,21,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,eKhata - name Mismatch,0,17,17,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Khata / Ekhata mutation / transfer,0,13,13,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,new Khata / Ekhata registration / creation,0,9,9,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Ekhata in previous owner name,0,6,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+E khata / Khata services,Do not issue ekhata,0,4,4,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Education,Infrastructure related Issues.,5,9,14,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Education,Academic Issues.,1,8,9,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Education,Examination Related Issues,0,1,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Education,Sports and co- Curricular Activities,0,1,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Electrical,Street Light Not Working,48991,71430,120421,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Electrical,Requirement For New Street Lights,1137,1595,2732,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Electrical,Street Lights Switched On During Day Time,849,1061,1910,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Electrical,Park Lights Not Working,340,471,811,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Electrical,Earthing Issue relate to Electric Poles/Panel Boards,341,357,698,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Electrical,Open Electrical Junction Box,234,241,475,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Estate,Encroachment,11,28,39,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Estate,Violation of rules by property Leasers,5,6,11,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Estate,Payment/Rent issues,2,2,4,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Estate,BBMP  Properties Lease issues,0,3,3,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Forest,obstructions Branches / Trees.,2854,5969,8823,TREE_OBSTRUCTION,tree_fall,Probable,Candidate only; requires spatial/semantic validation
+Forest,Removal of dead/fallen trees,2401,5128,7529,TREE_FALL,tree_fall,Direct,Eligible for cross-source matching
+Forest,Issues related Snakes/Birds/Monkeys,505,626,1131,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Dengue positive,0,9328,9328,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Increase in mosquito density,1243,2259,3502,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Fogging,368,1261,1629,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Air/Noise pollution,670,782,1452,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Health Dept,Spraying,365,954,1319,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Unhygienic premises in Hotel etc,219,299,518,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Indira Canteen,113,223,336,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Delay in issue of Trade licence,76,56,132,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Zonal Violation of the Building,13,70,83,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Unavailability of staff,24,34,58,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Unhygienic  premises in hospital,17,30,47,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Birth & Death Registration,18,17,35,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Non availability of drugs,5,7,12,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Health Dept,Non availability of vaccines,2,4,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Food Quality,25,36,61,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Others,9,31,40,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Food Quantity,11,9,20,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Staff Related,10,10,20,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Cleanliness of Canteen /Food Area,6,6,12,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Cleanliness,4,2,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Water quality,0,6,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Billing related,1,4,5,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Indira Canteen,Cleanliness of Utensils,0,2,2,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Information Technology,Others(Technical or Software Issues),36,58,94,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Information Technology,App Related Issues,38,52,90,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Lakes,Lake not maintained properly,161,213,374,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Sewage inflow to lake,122,155,277,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Dumping of garbage into lake,33,49,82,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Lake being encroached,25,47,72,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Lake fencing damaged,31,41,72,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Dying of fishes in lake,36,32,68,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Lakes,Dumping of construction & Demolition waste in to lake,9,23,32,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Lakes,Insufficient lake security personnel,11,13,24,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Lakes,Lake water misused,9,7,16,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Lakes,Lake gates are not opened as per the prescribed timing,3,7,10,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Major Roads,Food Quality,1,0,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Markets,Encroachment,36,182,218,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Markets,Illegal Parking,26,8,34,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Markets,Violation of rules by Shop rent / Leaser,1,7,8,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Markets,Trade License,5,2,7,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Markets,Rent Payment,0,6,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Markets,Garbage In Market Premises,0,3,3,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Markets,Payment Issues,2,1,3,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Optical Fiber Cables (OFC),Without permission digging of road,139,81,220,ROAD_WORK,construction,Probable,Candidate only; requires validation
+Others,Others,472,2809,3281,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Parks and Play grounds,Issues Related to Parks/Medians/Circles/Island.,305,621,926,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Parks and Play grounds,Gym/Children Play equipment in the parks,190,261,451,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Parks and Play grounds,Environmental protection,94,155,249,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Parks and Play grounds,Play Grounds,54,88,142,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Parks and Play grounds,Inspection not done,0,5,5,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Plastic,Use of banned single use plastic,60,95,155,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Projects Central,Potholes,3,62,65,ROAD_DAMAGE,pot_holes,Direct,Eligible for cross-source matching
+Projects Central,Street light issues,0,8,8,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Projects Central,Road furnitures,0,6,6,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Projects Central,Stagnation of water on road/ Water logging,0,5,5,WATERLOGGING,water_logging,Direct,Eligible for cross-source matching
+Projects Central,Drainage blockage,0,3,3,DRAINAGE,water_logging,Ambiguous,Do not auto-match; validate manually
+Property Tax services,Other property tax issues,0,8,8,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Property Tax services,Unable to generate receipt after property tax payment,0,4,4,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Property Tax services,Issues in property tax portal,0,2,2,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Property Tax services,Property tax owner name not updated,0,2,2,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Property Tax services,Property tax refund / adjustment,0,1,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Property Tax services,unable to generate property tax challan,0,1,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Revenue Department,"Khata Services (Registration, Transfer, Bifurcation and Amalgamation)",252,553,805,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Revenue Department,Unable to generate the property tax challan,91,184,275,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Revenue Department,Unable to Generate the receipt after property tax payment.,56,123,179,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Revenue Department,Discrepancy In Khata Certificate and Khata Extract,50,115,165,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Revenue Department,Others (JC),0,87,87,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Road Infrastructure,Road Infrastructure,2635,4870,7505,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Infrastructure,Illegal Parking,1,0,1,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Maintenance(Engg),Potholes,4514,6300,10814,ROAD_DAMAGE,pot_holes,Direct,Eligible for cross-source matching
+Road Maintenance(Engg),Road side drains,4382,5367,9749,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Maintenance(Engg),Debris Removal / Construction Material,2652,3535,6187,ROAD_OBSTRUCTION,construction,Probable,Candidate only; requires validation
+Road Maintenance(Engg),footpath encroachment,1790,1999,3789,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Maintenance(Engg),water stagnation,999,2127,3126,WATERLOGGING,water_logging,Direct,Eligible for cross-source matching
+Road Maintenance(Engg),Road cutting,1300,1613,2913,ROAD_WORK,construction,Probable,Candidate only; requires validation
+Road Maintenance(Engg),Footpath,1374,1434,2808,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Maintenance(Engg),UnAuthorised Constructions,242,1714,1956,CONSTRUCTION,construction,Probable,Candidate only; complaint may describe an administrative violation
+Road Maintenance(Engg),water leakage on road,378,445,823,WATER_RELATED,water_logging,Ambiguous,Leakage is not equivalent to waterlogging
+Road Maintenance(Engg),Overhanging cables,269,439,708,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Road Maintenance(Engg),Garbage vehicle not arrived,1,0,1,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Sanitation,Urination in Public/Open Defecation,200,334,534,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Sanitation,Public toilet(s) blockage,173,150,323,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Sanitation,Public toilet(s) cleaning,69,79,148,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Sanitation,No water supply in public toilet(s),25,29,54,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Sanitation,No electricity in public toilet(s),6,4,10,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Solid Waste (Garbage) Related,Garbage vehicle not arrived,11588,21252,32840,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Garbage dump,8511,20375,28886,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Sweeping not done,3552,5541,9093,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Garbage dumping in vacant sites,1145,2274,3419,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Dead animal(s),1135,2149,3284,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Solid Waste (Garbage) Related,Burning of Garbage in Open Space,816,1550,2366,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Garbage transfer not as per norms & area not kept clean,576,1736,2312,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Complaint against SW collector/ SWM official for violation of SWM Rules,694,1295,1989,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Solid Waste (Garbage) Related,Public dustbins not cleaned,318,597,915,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Garbage nuisance while transporting,235,464,699,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Solid Waste (Garbage) Related,Segregation of waste is not done,69,95,164,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Solid Waste (Garbage) Related,Others,0,1,1,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Storm  Water Drain(SWD),Maintenance of SWD,549,989,1538,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Storm  Water Drain(SWD),Sewerage water left in SWD,235,419,654,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Storm  Water Drain(SWD),Garbage thrown in storm water drain,149,269,418,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Town Planning,Construction not done as per approved plan (Building Bye Law Violations),935,1038,1973,CONSTRUCTION,construction,Probable,Candidate only; complaint may describe an administrative violation
+Town Planning,UnAuthorised Building Constructions,203,520,723,CONSTRUCTION,construction,Probable,Candidate only; complaint may describe an administrative violation
+Town Planning,Noise during Building Construction,158,236,394,CONSTRUCTION,construction,Probable,Candidate only; semantic context required
+Town Planning,Delay in issuing building permit,30,19,49,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Traffic Engineer Cell (TEC),TEC,10,296,306,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Water Crisis,Water related issue,2,700,702,BBMP_ONLY_URBAN_ISSUE,NO_DIRECT_BTP_MATCH,Do not map,Retain for BBMP-only/event-layer analysis
+Welfare Schemes,Onti Mane,15,11,26,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Welfare Schemes,Women Welfare Program,4,4,8,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Welfare Schemes,Issues Regarding SC/ST Schemes.,6,1,7,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Welfare Schemes,Schemes Related to BCM Program,1,4,5,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Welfare Schemes,Schemes Related to Physically Abled Person,2,1,3,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+Welfare Schemes,Senior  Citizen,1,2,3,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Stray dog related complaints,1354,1887,3241,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Animal birth control/neutering of stray dogs,1127,1244,2371,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Stray/Rabid dog bite,340,631,971,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Anti Rabies Vaccination of stray dogs,208,351,559,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Stray cattle related complaints,182,334,516,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Mutton/Chicken/fish stall Unhygienic maintenance,91,240,331,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Stray pig related complaints,65,28,93,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching
+veterinary,Pet dog licence,29,56,85,NOT_EVENT_FUSION,NO_DIRECT_BTP_MATCH,Do not map,Exclude from BBMP↔BTP event matching

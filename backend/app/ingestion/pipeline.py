@@ -1,7 +1,9 @@
 import re
 import logging
 from typing import Dict, Any, List, Optional
+
 from backend.app.ingestion.news import fetch_news
+from backend.app.ingestion.bbmp import fetch_bbmp
 from backend.app.ingestion.weather import fetch_weather
 from backend.app.nlp.spacy_extractor import extract_entities, BENGALURU_LOCALITIES
 from backend.app.classifier.classifier import classify_text
@@ -9,7 +11,7 @@ from backend.app.chef.calculator import compute_partial_chef
 from backend.app.database.db import (
     insert_report,
     count_corroborating_reports,
-    is_duplicate_news
+    is_duplicate_news,
 )
 from backend.app.geo.wards import resolve_point_to_ward
 
@@ -20,18 +22,19 @@ IRRELEVANT_TOPIC_EXCLUSIONS = [
     "nba", "clippers", "lakers", "49ers", "super bowl", "nfl", "mlb",
     "premier league", "la liga", "bcci meeting in mumbai", "in mumbai",
     "in delhi", "in kolkata", "in chennai", "in london", "australian open",
-    "formula 1", "f1 grand prix"
+    "formula 1", "f1 grand prix",
 ]
+
 
 def is_bengaluru_relevant(title: str, text: str) -> bool:
     """Accept Bengaluru civic reports, not unrelated stories that merely mention the city."""
     full_text = f"{title}\n{text}".lower()
 
     for excl in IRRELEVANT_TOPIC_EXCLUSIONS:
-        if re.search(rf"\b{re.escape(excl)}\b", full_text):
+        if re.search(rf"\\b{re.escape(excl)}\\b", full_text):
             title_lower = title.lower()
             if not any(
-                re.search(rf"\b{re.escape(loc)}\b", title_lower)
+                re.search(rf"\\b{re.escape(loc)}\\b", title_lower)
                 for loc in [
                     "bengaluru", "bangalore", "silk board",
                     "outer ring road", "hebbal", "indiranagar", "whitefield"
@@ -39,17 +42,15 @@ def is_bengaluru_relevant(title: str, text: str) -> bool:
             ):
                 return False
 
-    has_location = any(
-        re.search(rf"\b{re.escape(loc.lower())}\b", full_text)
-        for loc in BENGALURU_LOCALITIES
-    )
+    # Simple substring check for Bengaluru localities (case‑insensitive)
+    has_location = any(loc.lower() in full_text for loc in BENGALURU_LOCALITIES)
 
     civic_keywords = [
         "traffic", "congestion", "road", "pothole", "accident",
         "rain", "flood", "flooding", "waterlogging", "weather",
         "civic", "bbmp", "municipal", "garbage", "waste",
         "drainage", "sewage", "water supply", "power outage",
-        "tree fall", "infrastructure", "construction", "metro"
+        "tree fall", "infrastructure", "construction", "metro",
     ]
     has_civic_topic = any(word in full_text for word in civic_keywords)
 
@@ -97,7 +98,7 @@ def process_and_store_report(raw_report: Dict[str, Any], path: Optional[str] = N
         category=category,
         location=final_location,
         within_hours=24,
-        path=path
+        path=path,
     )
 
     # Step 5: Partial CHEF Confidence Calculation (Section 9)
@@ -105,7 +106,7 @@ def process_and_store_report(raw_report: Dict[str, Any], path: Optional[str] = N
         source=raw_report["source"],
         source_type=raw_report.get("source_type", "news"),
         event_time=raw_report["event_time"],
-        corroborating_count=corroboration_count
+        corroborating_count=corroboration_count,
     )
 
     # Assemble report record
@@ -125,24 +126,25 @@ def process_and_store_report(raw_report: Dict[str, Any], path: Optional[str] = N
         "confidence_tier": chef_result["confidence_tier"],
         "chef_factors": chef_result["chef"],
         "normalized_title": raw_report.get("normalized_title", ""),
-        "ingested_at": raw_report["ingested_at"]
+        "ingested_at": raw_report["ingested_at"],
     }
 
     # Step 6: Persist in SQLite
     inserted_id = insert_report(record, path=path)
     return inserted_id
 
+
 def run_ingestion_pipeline(path: Optional[str] = None) -> Dict[str, Any]:
-    """
-    Executes an end-to-end ingestion cycle:
+    """Execute an end‑to‑end ingestion cycle:
     1. Fetch news from NewsData.io (with 24h deduplication)
-    2. Filter strictly for Bengaluru-specific relevance
+    2. Fetch BBMP grievance data from OpenCity CKAN
     3. Fetch weather from OpenWeatherMap
     4. Run NLP, classification, CHEF scoring, and store in SQLite
     """
     all_errors: List[str] = []
     news_inserted = 0
     news_rejected = 0
+    bbmp_inserted = 0
     weather_inserted = 0
 
     # Step 1: News Ingestion
@@ -161,7 +163,20 @@ def run_ingestion_pipeline(path: Optional[str] = None) -> Dict[str, Any]:
             logger.error(err)
             all_errors.append(err)
 
-    # Step 2: Weather Ingestion (OpenWeatherMap Bengaluru sensor)
+    # Step 2: BBMP Grievance Ingestion (OpenCity CKAN)
+    bbmp_items, bbmp_errors = fetch_bbmp()
+    all_errors.extend(bbmp_errors)
+    for item in bbmp_items:
+        try:
+            result_id = process_and_store_report(item, path=path)
+            if result_id:
+                bbmp_inserted += 1
+        except Exception as e:
+            err = f"Failed processing BBMP report '{item.get('title')}': {str(e)}"
+            logger.error(err)
+            all_errors.append(err)
+
+    # Step 3: Weather Ingestion (OpenWeatherMap Bengaluru sensor)
     weather_item, weather_errors = fetch_weather()
     all_errors.extend(weather_errors)
 
@@ -175,19 +190,12 @@ def run_ingestion_pipeline(path: Optional[str] = None) -> Dict[str, Any]:
             logger.error(err)
             all_errors.append(err)
 
-    status = "success"
-    if all_errors and (news_inserted > 0 or weather_inserted > 0):
-        status = "partial"
-    elif all_errors and news_inserted == 0 and weather_inserted == 0:
-        status = "warning_no_data_or_keys"
-
+    status = "success" if not all_errors else "partial_success"
     return {
         "status": status,
-        "news_fetched": len(news_items),
         "news_inserted": news_inserted,
-        "news_rejected_not_bengaluru": news_rejected,
-        "news_skipped_duplicates": news_skipped,
-        "weather_fetched": 1 if weather_item else 0,
+        "news_rejected": news_rejected,
+        "bbmp_inserted": bbmp_inserted,
         "weather_inserted": weather_inserted,
-        "errors": all_errors
+        "errors": all_errors,
     }

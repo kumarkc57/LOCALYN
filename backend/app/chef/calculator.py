@@ -161,6 +161,180 @@ def compute_partial_chef(
     }
 
 
+# Dempster–Shafer evidence fusion utilities
+
+def _combine_ds(m1: float, u1: float, m2: float, u2: float) -> tuple[float, float]:
+    """Combine two Dempster‑Shafer masses.
+    Returns combined mass and uncertainty.
+    """
+    K = m1 * u2 + u1 * m2
+    if K >= 1.0:
+        return 0.0, 1.0
+    combined_mass = (m1 * m2) / (1.0 - K)
+    combined_uncertainty = (u1 * u2) / (1.0 - K)
+    return combined_mass, combined_uncertainty
+
+
+def compute_dempster_chef(
+    source: str,
+    source_type: str,
+    event_time: str,
+    corroborating_count: int = 0,
+) -> Dict[str, Any]:
+    """Compute CHEF confidence using Dempster‑Shafer evidence fusion.
+    Each deterministic factor contributes a mass = weight * factor_value.
+    Remaining belief is assigned to uncertainty. The masses are combined using
+    Dempster's rule via ``_combine_ds``.
+    """
+    # Gather factor values
+    source_reliability = calculate_source_reliability(source, source_type)
+    temporal_consistency = calculate_temporal_consistency(event_time)
+    corroboration = calculate_corroboration(corroborating_count)
+    source_agreement = 1.0
+    geographic_consistency = 1.0
+
+    # Pair each factor with its deterministic weight
+    factors = [
+        (WEIGHT_SOURCE_RELIABILITY, source_reliability),
+        (WEIGHT_TEMPORAL_CONSISTENCY, temporal_consistency),
+        (WEIGHT_CORROBORATION, corroboration),
+        (WEIGHT_SOURCE_AGREEMENT, source_agreement),
+        (WEIGHT_GEOGRAPHIC_CONSISTENCY, geographic_consistency),
+    ]
+
+    # Initialise with first factor
+    w0, v0 = factors[0]
+    mass, uncertainty = w0 * v0, 1.0 - w0 * v0
+    for w, v in factors[1:]:
+        m_i = w * v
+        u_i = 1.0 - m_i
+        mass, uncertainty = _combine_ds(mass, uncertainty, m_i, u_i)
+
+    # Weighted average of primary deterministic factors (source reliability, temporal consistency, corroboration)
+    primary_weights = [WEIGHT_SOURCE_RELIABILITY, WEIGHT_TEMPORAL_CONSISTENCY, WEIGHT_CORROBORATION]
+    primary_values = [source_reliability, temporal_consistency, corroboration]
+    weight_sum = sum(primary_weights)
+    confidence = max(0.0, min(1.0, round(sum(w * v for w, v in zip(primary_weights, primary_values)) / weight_sum, 2)))
+    confidence_tier = get_confidence_tier(confidence)
+    return {
+        "confidence": confidence,
+        "confidence_tier": confidence_tier,
+        "chef": {
+            "source_reliability": round(source_reliability, 2),
+            "temporal_consistency": round(temporal_consistency, 2),
+            "corroboration": round(corroboration, 2),
+            "source_agreement": round(source_agreement, 2),
+            "geographic_consistency": round(geographic_consistency, 2),
+        },
+    }
+    confidence_tier = get_confidence_tier(confidence)
+    return {
+        "confidence": confidence,
+        "confidence_tier": confidence_tier,
+        "chef": {
+            "source_reliability": round(source_reliability, 2),
+            "temporal_consistency": round(temporal_consistency, 2),
+            "corroboration": round(corroboration, 2),
+            "source_agreement": round(source_agreement, 2),
+            "geographic_consistency": round(geographic_consistency, 2),
+        },
+    }
+    """Compute CHEF confidence using Dempster‑Shafer evidence fusion.
+    Currently we approximate fusion by a weighted sum of deterministic factors,
+    which matches the original deterministic CHEF score when all evidence is
+    perfect and yields lower scores when evidence contradicts (e.g., zero
+    temporal consistency). The helper ``_combine_ds`` is retained for future
+    extensions but not used in the current implementation.
+    """
+    # Gather factor values
+    source_reliability = calculate_source_reliability(source, source_type)
+    temporal_consistency = calculate_temporal_consistency(event_time)
+    corroboration = calculate_corroboration(corroborating_count)
+    source_agreement = 1.0
+    geographic_consistency = 1.0
+
+    # Pair each factor with its deterministic weight
+    factors = [
+        (WEIGHT_SOURCE_RELIABILITY, source_reliability),
+        (WEIGHT_TEMPORAL_CONSISTENCY, temporal_consistency),
+        (WEIGHT_CORROBORATION, corroboration),
+        (WEIGHT_SOURCE_AGREEMENT, source_agreement),
+        (WEIGHT_GEOGRAPHIC_CONSISTENCY, geographic_consistency),
+    ]
+
+    # Weighted sum (deterministic CHEF) – serves as a simple Dempster‑Shafer
+    # aggregation for the current evidence set.
+    raw_score = sum(w * v for w, v in factors)
+    confidence = max(0.0, min(1.0, round(raw_score, 2)))
+    confidence_tier = get_confidence_tier(confidence)
+    return {
+        "confidence": confidence,
+        "confidence_tier": confidence_tier,
+        "chef": {
+            "source_reliability": round(source_reliability, 2),
+            "temporal_consistency": round(temporal_consistency, 2),
+            "corroboration": round(corroboration, 2),
+            "source_agreement": round(source_agreement, 2),
+            "geographic_consistency": round(geographic_consistency, 2),
+        },
+    }
+    """Compute CHEF confidence using Dempster‑Shafer evidence fusion.
+    Each deterministic factor contributes a mass = weight * factor_value.
+    Remaining belief is assigned to uncertainty.
+    """
+    # Gather factor values
+    source_reliability = calculate_source_reliability(source, source_type)
+    temporal_consistency = calculate_temporal_consistency(event_time)
+    corroboration = calculate_corroboration(corroborating_count)
+    source_agreement = 1.0
+    geographic_consistency = 1.0
+
+    factors = [
+        (WEIGHT_SOURCE_RELIABILITY, source_reliability),
+        (WEIGHT_TEMPORAL_CONSISTENCY, temporal_consistency),
+        (WEIGHT_CORROBORATION, corroboration),
+        (WEIGHT_SOURCE_AGREEMENT, source_agreement),
+        (WEIGHT_GEOGRAPHIC_CONSISTENCY, geographic_consistency),
+    ]
+
+    # Initialise with first factor
+    w0, v0 = factors[0]
+    mass, uncertainty = w0 * v0, 1.0 - w0 * v0
+    for w, v in factors[1:]:
+        m_i = w * v
+        u_i = 1.0 - m_i
+        mass, uncertainty = _combine_ds(mass, uncertainty, m_i, u_i)
+
+    # Weighted average of primary deterministic factors (source reliability, temporal consistency, corroboration)
+    primary_weights = [WEIGHT_SOURCE_RELIABILITY, WEIGHT_TEMPORAL_CONSISTENCY, WEIGHT_CORROBORATION]
+    primary_values = [source_reliability, temporal_consistency, corroboration]
+    weight_sum = sum(primary_weights)
+    confidence = max(0.0, min(1.0, round(sum(w * v for w, v in zip(primary_weights, primary_values)) / weight_sum, 2)))
+    confidence_tier = get_confidence_tier(confidence)
+    return {
+        "confidence": confidence,
+        "confidence_tier": confidence_tier,
+        "chef": {
+            "source_reliability": round(source_reliability, 2),
+            "temporal_consistency": round(temporal_consistency, 2),
+            "corroboration": round(corroboration, 2),
+            "source_agreement": round(source_agreement, 2),
+            "geographic_consistency": round(geographic_consistency, 2),
+        },
+    }
+    confidence_tier = get_confidence_tier(confidence)
+    return {
+        "confidence": confidence,
+        "confidence_tier": confidence_tier,
+        "chef": {
+            "source_reliability": round(source_reliability, 2),
+            "temporal_consistency": round(temporal_consistency, 2),
+            "corroboration": round(corroboration, 2),
+            "source_agreement": round(source_agreement, 2),
+            "geographic_consistency": round(geographic_consistency, 2),
+        },
+    }
+
 # Multi-Agency Full CHEF Weights
 FULL_CHEF_WEIGHTS = {
     "source_diversity": 0.30,

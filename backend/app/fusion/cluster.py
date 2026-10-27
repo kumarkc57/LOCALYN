@@ -81,6 +81,8 @@ class CanonicalEvent:
             "latest_time": self.latest_time,
             "participating_agencies": sorted(list(self.participating_agencies)),
             "source_diversity_count": len(self.participating_agencies),
+            "source_diversity_agencies": sorted(list(self.participating_agencies)),
+
             "observations_count": len(self.observations),
             "confidence": self.chef_data.get("confidence", 0.5),
             "confidence_tier": self.chef_data.get("confidence_tier", "LOW"),

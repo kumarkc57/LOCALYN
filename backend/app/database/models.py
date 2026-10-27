@@ -91,6 +91,7 @@ class CanonicalEventResponse(BaseModel):
     latest_time: Optional[str] = None
     participating_agencies: List[str]
     source_diversity_count: int
+    source_diversity_agencies: List[str]
     observations_count: int
     confidence: float
     confidence_tier: str

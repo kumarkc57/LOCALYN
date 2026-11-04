@@ -301,8 +301,8 @@ The project investigates how fragmented administrative observations can be corre
 
 Developed as an academic engineering project.
 
-Kumar K C
-Ayush Gowda
+Kumar K C,
+Ayush Gowda,
 Tarun C L
 
 ---

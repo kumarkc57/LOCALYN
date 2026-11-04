@@ -1,3 +1,15 @@
-
+﻿node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
 __pycache__/
 *.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+.pytest_cache/
+LOCALYN CIE-1*

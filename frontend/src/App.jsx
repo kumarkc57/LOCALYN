@@ -28,6 +28,7 @@ import {
   Droplets
 } from 'lucide-react';
 import BengaluruMap from './components/BengaluruMap';
+import EvidenceAnalysis from './pages/EvidenceAnalysis';
 import './App.css';
 
 const API_BASE_URL = 'http://localhost:8000';
@@ -114,7 +115,7 @@ export default function App() {
     if (!isBackground) setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE_URL}/reports?limit=150`);
+      const res = await fetch(`${API_BASE_URL}/reports`);
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load reports`);
       const data = await res.json();
       setReports(data);
@@ -358,6 +359,7 @@ export default function App() {
           <span>Accuracy & Evaluation</span>
           <span className="tab-badge">Benchmark</span>
         </button>
+
       </div>
 
       {/* =====================================================================
@@ -1176,6 +1178,11 @@ export default function App() {
           </div>
         </section>
       )}
+
+      {/* =====================================================================
+          TAB 4: EVIDENCE ANALYSIS & CHEF FACTORS AUDIT
+          ===================================================================== */}
+      {activeTab === 'evidence' && <EvidenceAnalysis />}
 
       {/* Reliability Score Breakdown Modal */}
       {selectedReportForChef && (

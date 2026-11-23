@@ -19,7 +19,7 @@ LOCALYN addresses this challenge through multi-source data integration and spati
 
 The project works with the following data sources:
 
-- **BBMP Municipal Grievance Records:** 326,156 complaints from 2023–2024 across 198 Bengaluru wards.
+- **BBMP Municipal Grievance Records:** 69,484 complaints from 2023–2025 across 225 Bengaluru wards.
 - **Bengaluru Traffic Police (BTP):** Traffic incident telemetry containing geographical coordinates and incident information.
 - **Environmental Data:** Weather and environmental observations providing additional context about urban conditions.
 
@@ -76,9 +76,9 @@ LOCALYN uses a crosswalk taxonomy to align agency-specific categories with a com
 
 The mapping framework consists of:
 
-- 161 category mappings.
+- 159 category mappings.
 - Direct, probable, ambiguous, and excluded mapping classifications.
-- 13 cross-agency event families.
+- 6 cross-agency event families.
 
 Examples of event families include potholes, waterlogging, fallen trees, and other relevant municipal and traffic-related incidents.
 

@@ -33,11 +33,11 @@ LOCALYN follows a multi-stage data processing architecture.
 
 ```mermaid
 flowchart TD
-    A["BBMP Municipal Grievance Records<br/>326,156 Complaints<br/>198 Bengaluru Wards"]
+    A["BBMP Municipal Grievance Records<br/>69,484 Complaints<br/>225 Bengaluru Wards"]
     B["Bengaluru Traffic Police<br/>GPS Coordinates<br/>Incident Telemetry"]
     C["Environmental Data<br/>Weather and Observations"]
 
-    D["Crosswalk Taxonomy Engine<br/>161 Category Mappings<br/>13 Event Families"]
+    D["Crosswalk Taxonomy Engine<br/>161 Category Mappings<br/>6 Event Families"]
 
     E["Gated Candidate Generation<br/>Temporal Compatibility<br/>Event Family Compatibility<br/>Spatial Point-in-Polygon Validation<br/>Category Exclusion"]
 

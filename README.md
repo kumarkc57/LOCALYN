@@ -37,7 +37,7 @@ flowchart TD
     B["Bengaluru Traffic Police<br/>GPS Coordinates<br/>Incident Telemetry"]
     C["Environmental Data<br/>Weather and Observations"]
 
-    D["Crosswalk Taxonomy Engine<br/>161 Category Mappings<br/>6 Event Families"]
+    D["Crosswalk Taxonomy Engine<br/>159 Category Mappings<br/>6 Event Families"]
 
     E["Gated Candidate Generation<br/>Temporal Compatibility<br/>Event Family Compatibility<br/>Spatial Point-in-Polygon Validation<br/>Category Exclusion"]
 
